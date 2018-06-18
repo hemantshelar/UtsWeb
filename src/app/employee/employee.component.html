@@ -1,0 +1,70 @@
+<div *ngIf="Employee">
+
+
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="pull-left">
+        <img [src]="Employee.imageUri" alt="" class="img-responsive" style="max-height: 100px;">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-3">
+      <h3>{{Employee.firstName}} {{Employee.lastName}}</h3>
+      <h4>{{Employee.designation}}</h4>
+    </div>
+    <div class="col-xs-1">
+      <h3>
+        <span (click)="likeReceived()" class="glyphicon glyphicon-thumbs-up pull-right">{{Employee.likes}}</span>
+      </h3>
+      <span class="label-pill">Like</span>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-xs-12 col-md-8">
+      <table class="table table-striped">
+        <tbody>
+          <tr *ngIf="Manager">
+            <td>Manager</td>
+            <td>
+              <div>
+                <span class="glyphicon glyphicon-user"></span>
+                {{Manager.firstName}} {{Manager.lastName}}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>OFFICE PHONE</td>
+            <td>
+              <div>
+                <span class="glyphicon glyphicon-home"></span>
+                {{Employee.contactInfo.officePhone}}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>CELL PHONE</td>
+            <td>
+              <div>
+                <span class="glyphicon glyphicon-headphones"></span>
+                {{Employee.contactInfo.cellPhone}}
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>EMAIL</td>
+            <td>
+              <div>
+                <span class="glyphicon glyphicon-envelope"></span>
+                {{Employee.contactInfo.email}}
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

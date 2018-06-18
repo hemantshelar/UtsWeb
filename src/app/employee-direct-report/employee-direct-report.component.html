@@ -1,0 +1,21 @@
+
+<div class="well" *ngIf="DirectReports.length > 0">
+  <div class="row">
+    <h4>Direct Reports</h4>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <a href="#" class="list-group-item clearfix" *ngFor="let e of DirectReports">
+        <span class="pull-left">
+          <img [src]="e.imageUri" alt=""
+            class="img-responsive" style="max-height: 100px;max-width:150px">
+        </span>
+        <div class="pull-right">
+          <h4 class="list-group-item-heading">{{e.firstName}}  {{e.lastName}}</h4>
+          <p class="list-group-item-text">Software Developer</p>
+          <span class="label label-warning">{{e.likes}}</span>
+        </div>
+      </a>      
+    </div>
+  </div>
+</div>

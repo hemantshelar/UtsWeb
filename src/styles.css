@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+
+.label-pill {
+    padding-right: .8em;
+    padding-left: .8em;
+    border-radius: 150rem;
+  }

@@ -1,0 +1,16 @@
+<div class="container">
+    <app-header (onSearchComplete)="onSearchComplete($event)"></app-header>
+
+    <div class="row">
+        <div class="col-md-8">
+            <app-employee [Employee]="staffServiceFindResponse.employee"
+                [Manager]="staffServiceFindResponse.manager"
+            ></app-employee>
+        </div>
+        <div class="col-md-4">
+            <app-employee-direct-report
+            [DirectReports]="staffServiceFindResponse.directReports"
+            ></app-employee-direct-report>
+        </div>
+    </div>
+</div>
